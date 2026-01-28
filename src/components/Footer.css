@@ -1,0 +1,95 @@
+/* src/components/Footer.css */
+
+.itro-footer {
+  background: #880e4f; /* deep pink/magenta from your theme */
+  color: white;
+  padding: 4rem 5% 2.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.footer-section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #ffccdd; /* light pink accent */
+}
+
+.footer-section p {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  opacity: 0.95;
+}
+
+.footer-section textarea {
+  width: 100%;
+  height: 130px;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  resize: vertical;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.footer-section textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.send-btn {
+  background: #d81b60;
+  color: white;
+  border: none;
+  padding: 0.95rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.send-btn:hover {
+  background: #ad1457;
+  transform: translateY(-3px);
+}
+
+/* Bottom copyright */
+.footer-bottom {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom small {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+}

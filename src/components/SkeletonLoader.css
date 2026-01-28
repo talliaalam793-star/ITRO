@@ -1,0 +1,129 @@
+/* src/components/SkeletonLoader.css */
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.skeleton-card,
+.skeleton-text-block,
+.skeleton-chat {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.skeleton-card {
+  height: 420px; /* adjust to match your ProductCard height */
+  display: flex;
+  flex-direction: column;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 37%,
+    #f0f0f0 63%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+.skeleton-info {
+  padding: 1.4rem;
+}
+
+.skeleton-text {
+  height: 18px;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 37%,
+    #f0f0f0 63%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s infinite linear;
+  margin-bottom: 1rem;
+}
+
+.skeleton-text.title {
+  width: 70%;
+  height: 24px;
+}
+
+.skeleton-text.price {
+  width: 50%;
+  height: 20px;
+}
+
+.skeleton-text.button {
+  width: 60%;
+  height: 42px;
+  border-radius: 50px;
+  margin-top: 1rem;
+}
+
+/* Text block skeleton (for paragraphs, descriptions) */
+.skeleton-text-block {
+  padding: 1rem;
+}
+
+.skeleton-text.line {
+  width: 100%;
+  height: 16px;
+  margin-bottom: 0.8rem;
+}
+
+.skeleton-text.line:last-child {
+  width: 60%;
+}
+
+/* Chat message skeleton */
+.skeleton-chat {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.skeleton-message {
+  display: flex;
+}
+
+.skeleton-message.user {
+  justify-content: flex-end;
+}
+
+.skeleton-message.bot {
+  justify-content: flex-start;
+}
+
+.skeleton-message .skeleton-text.bubble {
+  width: 65%;
+  height: 48px;
+  border-radius: 20px;
+}
+
+.skeleton-message.user .skeleton-text.bubble {
+  border-radius: 20px 20px 0 20px;
+}
+
+.skeleton-message.bot .skeleton-text.bubble {
+  border-radius: 20px 20px 20px 0;
+}
+
+/* Grid layout helper (use in parent component) */
+.product-grid-loading {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
